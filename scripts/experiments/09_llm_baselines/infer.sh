@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-# Usage: MODEL_CFG=gptoss20b|gptoss|weblab [CUDA_VISIBLE_DEVICES=...] bash infer.sh [--dry_run]
+# Usage: MODEL_CFG=gptoss|weblab [CUDA_VISIBLE_DEVICES=...] bash infer.sh [--dry_run]
 set -euo pipefail
 SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 REPO_ROOT=$(cd "${SCRIPT_DIR}/../../.." && pwd)
 LAST_RUN_FILE="${SCRIPT_DIR}/last_run_dir.txt"
-MODEL_CFG="${MODEL_CFG:?set MODEL_CFG=gptoss20b|gptoss|weblab}"
+MODEL_CFG="${MODEL_CFG:?set MODEL_CFG=gptoss|weblab}"
 
 set -a
 source "${SCRIPT_DIR}/config/base.env"
